@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Amor Infinito</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<title>LUNES 1 DE JUNIO DEL 2026 - POEMA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,349 +18,270 @@ box-sizing:border-box;
 
 body{
 min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:40px 20px;
-background:
-radial-gradient(circle at top,#25305f 0%,#121a36 35%,#070b16 100%);
 overflow-x:hidden;
 font-family:'Cormorant Garamond',serif;
+background:
+linear-gradient(180deg,#fff6fb 0%,#f9ecff 20%,#ecdfff 45%,#d9d8ff 70%,#c7e4ff 100%);
 position:relative;
+display:flex;
+justify-content:center;
+padding:80px 20px;
 }
 
-/* Estrellas */
+/* Niebla romántica */
 
 body::before{
 content:'';
 position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background-image:
-radial-gradient(white 1px, transparent 1px),
-radial-gradient(white 1px, transparent 1px),
-radial-gradient(rgba(255,255,255,.8) 1px, transparent 1px);
-background-size:120px 120px, 180px 180px, 250px 250px;
-animation:twinkle 12s linear infinite;
-opacity:.8;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(255,255,255,.8), transparent 35%),
+radial-gradient(circle at 80% 10%, rgba(255,220,240,.8), transparent 30%),
+radial-gradient(circle at 50% 90%, rgba(255,255,255,.7), transparent 40%);
+filter:blur(60px);
 pointer-events:none;
 }
 
-@keyframes twinkle{
-0%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0);}
-}
+/* Pétalos */
 
-/* Luna */
-
-.moon{
+.petals{
 position:fixed;
-top:60px;
-right:80px;
-width:120px;
-height:120px;
-border-radius:50%;
-background:#fff8dc;
-box-shadow:
-0 0 40px #fff,
-0 0 80px rgba(255,255,255,.6),
-0 0 120px rgba(255,255,255,.3);
+inset:0;
+overflow:hidden;
+pointer-events:none;
 }
 
-/* Contenedor */
+.petal{
+position:absolute;
+top:-50px;
+font-size:22px;
+opacity:.6;
+animation:fall linear infinite;
+}
 
-.poem-container{
-max-width:900px;
+.petal:nth-child(1){left:8%;animation-duration:15s;}
+.petal:nth-child(2){left:18%;animation-duration:18s;}
+.petal:nth-child(3){left:35%;animation-duration:14s;}
+.petal:nth-child(4){left:50%;animation-duration:20s;}
+.petal:nth-child(5){left:65%;animation-duration:17s;}
+.petal:nth-child(6){left:80%;animation-duration:15s;}
+.petal:nth-child(7){left:92%;animation-duration:22s;}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+
+/* Flores decorativas */
+
+.flower{
+position:fixed;
+font-size:55px;
+opacity:.25;
+filter:blur(.3px);
+}
+
+.f1{top:60px;left:40px;}
+.f2{top:120px;right:60px;}
+.f3{bottom:80px;left:50px;}
+.f4{bottom:100px;right:50px;}
+
+/* Tarjeta */
+
+.poem-card{
 width:100%;
-padding:70px;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.15);
+max-width:950px;
+background:rgba(255,255,255,.45);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.8);
 border-radius:35px;
+padding:70px;
 box-shadow:
-0 0 40px rgba(255,192,203,.15),
-0 0 80px rgba(255,255,255,.05);
+0 20px 60px rgba(146,109,255,.18),
+0 0 120px rgba(255,255,255,.4);
 position:relative;
 z-index:2;
-animation:appear 2s ease;
 }
 
-@keyframes appear{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.poem-card::before{
+content:'';
+position:absolute;
+inset:12px;
+border-radius:28px;
+border:1px solid rgba(255,255,255,.6);
+pointer-events:none;
 }
 
 .title{
 font-family:'Great Vibes',cursive;
-font-size:4.5rem;
+font-size:5rem;
 text-align:center;
-color:#ffd7ec;
-margin-bottom:15px;
-text-shadow:0 0 25px rgba(255,192,203,.7);
+color:#a65fb6;
+margin-bottom:10px;
 }
 
 .subtitle{
 text-align:center;
-color:#f8e9f1;
 letter-spacing:3px;
-margin-bottom:45px;
-font-size:1.1rem;
+font-size:1rem;
+color:#7b5a9a;
+margin-bottom:30px;
 }
 
 .divider{
-width:160px;
+width:180px;
 height:2px;
-background:linear-gradient(to right,transparent,#ffd7ec,transparent);
+background:linear-gradient(to right,transparent,#c38ae8,transparent);
 margin:0 auto 50px;
 }
 
 .poem{
-color:#fffafc;
-font-size:1.55rem;
-line-height:2.2;
+font-size:1.6rem;
+line-height:2;
+color:#503f63;
+font-weight:500;
 text-align:center;
 white-space:pre-line;
-font-weight:300;
-text-shadow:0 0 10px rgba(255,255,255,.15);
+}
+
+.highlight{
+display:block;
+font-size:2rem;
+margin:25px 0;
+color:#9f5ec7;
+font-weight:600;
 }
 
 .signature{
 margin-top:60px;
 text-align:center;
 font-family:'Great Vibes',cursive;
-font-size:3rem;
-color:#ffd7ec;
-}
-
-/* Corazones flotando */
-
-.heart{
-position:fixed;
-bottom:-50px;
-font-size:24px;
-animation:floatUp linear infinite;
-opacity:.5;
-}
-
-.heart:nth-child(1){left:10%;animation-duration:12s;}
-.heart:nth-child(2){left:25%;animation-duration:16s;}
-.heart:nth-child(3){left:45%;animation-duration:14s;}
-.heart:nth-child(4){left:65%;animation-duration:18s;}
-.heart:nth-child(5){left:85%;animation-duration:15s;}
-
-@keyframes floatUp{
-0%{
-transform:translateY(0) scale(.8);
-opacity:0;
-}
-20%{
-opacity:.6;
-}
-100%{
-transform:translateY(-120vh) scale(1.4);
-opacity:0;
-}
+font-size:3.2rem;
+color:#b86acb;
 }
 
 @media(max-width:768px){
 
-.poem-container{
-padding:35px 25px;
+.poem-card{
+padding:40px 25px;
 }
 
 .title{
-font-size:3.2rem;
+font-size:3.7rem;
 }
 
 .poem{
-font-size:1.25rem;
-line-height:2;
+font-size:1.28rem;
+line-height:1.9;
 }
 
-.moon{
-width:90px;
-height:90px;
-right:25px;
+.signature{
+font-size:2.6rem;
 }
 }
 
 </style>
 </head>
+
 <body>
 
-<div class="moon"></div>
+<div class="petals">
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+</div>
 
-<div class="heart">❤</div>
-<div class="heart">❤</div>
-<div class="heart">❤</div>
-<div class="heart">❤</div>
-<div class="heart">❤</div>
+<div class="flower f1">🪷</div>
+<div class="flower f2">🌷</div>
+<div class="flower f3">🪻</div>
+<div class="flower f4">🌹</div>
 
-<div class="poem-container">
+<div class="poem-card">
 
 <h1 class="title">Mi Amor Infinito</h1>
 
 <div class="subtitle">
-✦ Noche del Lunes · 1 de Junio de 2026 ✦
+✦ NOCHE DEL LUNES · 1 DE JUNIO DE 2026 ✦
 </div>
 
 <div class="divider"></div>
 
 <div class="poem">
-Esta noche de lunes, 1 de junio de 2026,
-cuando el cielo parece extender un manto de estrellas
-sobre el mundo dormido,
-mi corazón vuelve a buscarte
-como si fueras el destino más hermoso
-que la vida escribió para mí.
 
-Mientras la luna ilumina los caminos silenciosos
-y la brisa nocturna acaricia lentamente la noche,
-mis pensamientos vuelan hasta ti,
-porque no existe un instante
-en el que deje de sentir tu presencia
-dentro de cada latido de mi corazón.
+Esta noche de lunes, 1 de junio de 2026, cuando el cielo parece extender un manto de estrellas sobre el mundo dormido, mi corazón vuelve a buscarte como si fueras el destino más hermoso que la vida escribió para mí.
 
-Tú llegaste a mi vida
-como llegan los milagros:
-sin avisar,
-sin hacer ruido,
-pero cambiándolo todo para siempre.
+Mientras la luna ilumina los caminos silenciosos y la brisa nocturna acaricia lentamente la noche, mis pensamientos vuelan hasta ti, porque no existe un instante en el que deje de sentir tu presencia dentro de cada latido de mi corazón.
 
-Desde que apareciste,
-los días tienen más color,
-las noches tienen más magia,
-y los sueños tienen tu nombre escrito
-en cada rincón de mi alma.
+Tú llegaste a mi vida como llegan los milagros: sin avisar, sin hacer ruido, pero cambiándolo todo para siempre.
 
-Eres la mujer que convirtió mis sentimientos
-en algo mucho más grande que palabras.
-Porque hay amores que se explican,
-pero el mío por ti simplemente se siente,
-se vive,
-se respira.
+Desde que apareciste, los días tienen más color, las noches tienen más magia y los sueños tienen tu nombre escrito en cada rincón de mi alma.
 
-Te amo en la calma de los días tranquilos,
-pero también en medio de todas las tormentas.
-Te amo cuando sonríes,
-cuando hablas,
-cuando me miras,
-e incluso cuando el silencio nos acompaña,
-porque tu existencia por sí sola
-es suficiente para llenar mi corazón de felicidad.
+Eres la mujer que convirtió mis sentimientos en algo mucho más grande que palabras. Porque hay amores que se explican, pero el mío por ti simplemente se siente, se vive, se respira.
 
-Si pudiera describir lo que significas para mí,
-diría que eres la luna de mis noches más oscuras,
-la estrella que nunca deja de brillar,
-el refugio donde descansan mis miedos
-y el hogar donde siempre encuentra paz mi corazón.
+Te amo en la calma de los días tranquilos, pero también en medio de todas las tormentas. Te amo cuando sonríes, cuando hablas, cuando me miras e incluso cuando el silencio nos acompaña, porque tu existencia por sí sola es suficiente para llenar mi corazón de felicidad.
 
-Esta noche quiero que sepas
-que no hay distancia,
-ni tiempo,
-ni obstáculo capaz de disminuir
-todo lo que siento por ti.
+Si pudiera describir lo que significas para mí, diría que eres la luna de mis noches más oscuras, la estrella que nunca deja de brillar, el refugio donde descansan mis miedos y el hogar donde siempre encuentra paz mi corazón.
 
-Porque mi amor por ti
-no conoce límites.
+Esta noche quiero que sepas que no hay distancia, ni tiempo, ni obstáculo capaz de disminuir todo lo que siento por ti.
 
-Es un amor que crece cada día,
-que encuentra nuevas razones para amarte
-en cada conversación,
-en cada recuerdo,
-en cada pequeño detalle que te hace única.
+<span class="highlight">Porque mi amor por ti no conoce límites.</span>
+
+Es un amor que crece cada día, que encuentra nuevas razones para amarte en cada conversación, en cada recuerdo y en cada pequeño detalle que te hace única.
 
 Me enamora tu manera de existir.
 
-Me enamora tu dulzura,
-tu fuerza,
-tu forma de ver la vida,
-tu capacidad para iluminar mis días
-sin siquiera darte cuenta.
+Me enamora tu dulzura, tu fuerza, tu forma de ver la vida y tu capacidad para iluminar mis días sin siquiera darte cuenta.
 
-Y mientras el mundo continúa girando,
-yo sigo encontrando en ti
-la razón más hermosa para sonreír.
+Y mientras el mundo continúa girando, yo sigo encontrando en ti la razón más hermosa para sonreír.
 
-Si esta noche pudiera pedir un deseo,
-pediría seguir construyendo recuerdos contigo,
-seguir descubriendo nuevas formas de amarte,
-seguir compartiendo contigo
-cada amanecer,
-cada atardecer
-y cada noche como esta.
+Si esta noche pudiera pedir un deseo, pediría seguir construyendo recuerdos contigo, seguir descubriendo nuevas formas de amarte, seguir compartiendo contigo cada amanecer, cada atardecer y cada noche como esta.
 
-Porque cuando imagino el futuro,
-siempre apareces tú.
+Porque cuando imagino el futuro, siempre apareces tú.
 
-Siempre estás tú
-en mis sueños,
-en mis planes,
-en mis ilusiones
-y en cada esperanza que guarda mi corazón.
+Siempre estás tú en mis sueños, en mis planes, en mis ilusiones y en cada esperanza que guarda mi corazón.
 
-Eres el pensamiento que me acompaña al despertar
-y el último nombre que susurra mi alma
-antes de dormir.
+Eres el pensamiento que me acompaña al despertar y el último nombre que susurra mi alma antes de dormir.
 
-Y aunque las palabras intenten explicar
-la inmensidad de este sentimiento,
-la verdad es que ninguna alcanza
-a describir completamente lo que provocas en mí.
+Y aunque las palabras intenten explicar la inmensidad de este sentimiento, la verdad es que ninguna alcanza a describir completamente lo que provocas en mí.
 
-Porque tú eres mucho más que un amor.
+<span class="highlight">
+Eres mi alegría favorita,
+mi pensamiento constante,
+mi inspiración diaria,
+mi sueño más hermoso,
+mi casualidad favorita,
+mi bendición más grande,
+mi felicidad más sincera.
+</span>
 
-Eres mi alegría favorita.
-
-Mi pensamiento constante.
-
-Mi inspiración diaria.
-
-Mi sueño más hermoso.
-
-Mi casualidad favorita.
-
-Mi bendición más grande.
-
-Mi felicidad más sincera.
-
-Y esta noche de lunes,
-bajo este cielo lleno de estrellas,
-quiero que guardes estas palabras
-muy cerca de tu corazón.
+Y esta noche de lunes, bajo este cielo lleno de estrellas, quiero que guardes estas palabras muy cerca de tu corazón.
 
 Porque nacen de lo más profundo del mío.
 
-Y porque, entre todas las cosas maravillosas
-que existen en este mundo,
-tú sigues siendo la más hermosa de todas.
+Y porque, entre todas las cosas maravillosas que existen en este mundo, tú sigues siendo la más hermosa de todas.
 
-Te amo con la intensidad de cada latido,
-con la ternura de cada recuerdo,
-con la fuerza de cada sueño
-y con toda el alma que habita dentro de mí.
+Te amo con la intensidad de cada latido, con la ternura de cada recuerdo, con la fuerza de cada sueño y con toda el alma que habita dentro de mí.
 
 Te amo hoy.
 
 Te amaré mañana.
 
-Y te amaré en cada noche que venga,
-porque mi corazón ya encontró su lugar favorito,
+Y te amaré en cada noche que venga, porque mi corazón ya encontró su lugar favorito,
 
 y ese lugar siempre será contigo.
+
 </div>
 
 <div class="signature">
-Con todo mi amor ❤
+Para Siempre, Mi Amor ❤️
 </div>
 
 </div>
